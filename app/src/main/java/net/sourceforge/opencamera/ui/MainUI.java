@@ -2113,7 +2113,6 @@ public class MainUI {
                 Log.d(TAG, "camera not opened!");
             return;
         }
-
         if( MyDebug.LOG )
             Log.d(TAG, "open popup");
 

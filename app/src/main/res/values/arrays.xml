@@ -147,7 +147,7 @@
         <item>None</item>
         <item>3x3</item>
         <item>Phi 3x3</item>
-        <item>4x2</item>
+        <!--<item>4x2</item>
         <item>Crosshair</item>
         <item>Golden (1)</item>
         <item>Golden (2)</item>
@@ -155,12 +155,12 @@
         <item>Golden (4)</item>
         <item>Triangle (1)</item>
         <item>Triangle (2)</item>
-        <item>Diagonals</item>
+        <item>Diagonals</item>-->
     </string-array>
     <string-array name="preference_grid_values">
         <item>preference_grid_none</item>
         <item>preference_grid_3x3</item>
-        <item>preference_grid_phi_3x3</item>
+       <!-- <item>preference_grid_phi_3x3</item>
         <item>preference_grid_4x2</item>
         <item>preference_grid_crosshair</item>
         <item>preference_grid_golden_spiral_right</item>
@@ -169,7 +169,7 @@
         <item>preference_grid_golden_spiral_upside_down_left</item>
         <item>preference_grid_golden_triangle_1</item>
         <item>preference_grid_golden_triangle_2</item>
-        <item>preference_grid_diagonals</item>
+        <item>preference_grid_diagonals</item>-->
     </string-array>
     <string-array name="preference_stamp_entries">
         <item>No stamp</item>
@@ -694,7 +694,7 @@
     <string-array name="preference_burst_mode_values">
         <item>1</item>
         <item>2</item>
-        <item>3</item>
+       <!-- <item>3</item>
         <item>4</item>
         <item>5</item>
         <item>10</item>
@@ -702,7 +702,7 @@
         <item>30</item>
         <item>40</item>
         <item>50</item>
-        <item>unlimited</item>
+        <item>unlimited</item>-->
     </string-array>
     <!-- note, actually refers to the auto-repeat mode, not the newer fast burst mode -->
     <string-array name="preference_burst_interval_entries">

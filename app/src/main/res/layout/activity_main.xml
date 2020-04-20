@@ -3,6 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
+   <!-- <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+       />-->
 
     <FrameLayout
         android:id="@+id/preview"
@@ -600,6 +603,7 @@
         android:layout_alignRight="@+id/popup"
         android:layout_below="@+id/popup"
         android:fadeScrollbars="false"
+        android:paddingTop="40dp"
         />
     
     <ScrollView

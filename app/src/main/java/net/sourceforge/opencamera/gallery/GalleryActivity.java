@@ -17,7 +17,7 @@ public class GalleryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        Fragment fragment= new MediaPhotoFragment();
+        Fragment fragment= new MediaPhotoPagerFragment();
         transaction.replace(R.id.gobedia2, fragment);
     }
 

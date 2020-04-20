@@ -55,7 +55,7 @@
     <string name="audio_disabled">Аудио выключено</string>
     <string name="max_duration">Макс. продолжительность</string>
     <string name="color_effect">Цветовой эффект</string>
-    <string name="scene_mode">Сцена</string>
+   <string name="scene_mode">Сцена</string>
     <string name="white_balance">Баланс белого</string>
     
     <string name="angle">Угол</string>

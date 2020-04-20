@@ -228,32 +228,32 @@ public class PopupView extends LinearLayout {
                     current_mode = ""; // this will mean no photo mode is highlighted in the UI
                 }
 
-                if( use_expanded_menu ) {
-                    addRadioOptionsToPopup(sharedPreferences, photo_modes, photo_modes, getResources().getString(R.string.photo_mode), null, null, current_mode, "TEST_PHOTO_MODE", new RadioOptionsListener() {
-                        @Override
-                        public void onClick(String selected_value) {
-                            if( MyDebug.LOG )
-                                Log.d(TAG, "clicked photo mode: " + selected_value);
-
-                            changePhotoMode(photo_modes, photo_mode_values, selected_value);
-                        }
-                    });
-                }
-                else {
-                    addTitleToPopup(getResources().getString(R.string.photo_mode));
-                    if( MyDebug.LOG )
-                        Log.d(TAG, "PopupView time 6: " + (System.nanoTime() - debug_time));
-
-                    addButtonOptionsToPopup(photo_modes, -1, -1, "", current_mode, 4, "TEST_PHOTO_MODE", new ButtonOptionsPopupListener() {
-                        @Override
-                        public void onClick(String option) {
-                            if( MyDebug.LOG )
-                                Log.d(TAG, "clicked photo mode: " + option);
-
-                            changePhotoMode(photo_modes, photo_mode_values, option);
-                        }
-                    });
-                }
+//                if( use_expanded_menu ) {
+//                    addRadioOptionsToPopup(sharedPreferences, photo_modes, photo_modes, getResources().getString(R.string.photo_mode), null, null, current_mode, "TEST_PHOTO_MODE", new RadioOptionsListener() {
+//                        @Override
+//                        public void onClick(String selected_value) {
+//                            if( MyDebug.LOG )
+//                                Log.d(TAG, "clicked photo mode: " + selected_value);
+//
+//                            changePhotoMode(photo_modes, photo_mode_values, selected_value);
+//                        }
+//                    });
+//                }
+//                else {
+////                    addTitleToPopup(getResources().getString(R.string.photo_mode));
+////                    if( MyDebug.LOG )
+////                        Log.d(TAG, "PopupView time 6: " + (System.nanoTime() - debug_time));
+////
+////                    addButtonOptionsToPopup(photo_modes, -1, -1, "", current_mode, 4, "TEST_PHOTO_MODE", new ButtonOptionsPopupListener() {
+////                        @Override
+////                        public void onClick(String option) {
+////                            if( MyDebug.LOG )
+////                                Log.d(TAG, "clicked photo mode: " + option);
+////
+////                            changePhotoMode(photo_modes, photo_mode_values, option);
+////                        }
+////                    });
+//                }
             }
             if( MyDebug.LOG )
                 Log.d(TAG, "PopupView time 7: " + (System.nanoTime() - debug_time));
@@ -340,7 +340,7 @@ public class PopupView extends LinearLayout {
                     }
                 });
 
-                this.addView(checkBox);
+                //this.addView(checkBox);
             }
             if( MyDebug.LOG )
                 Log.d(TAG, "PopupView time 8: " + (System.nanoTime() - debug_time));
@@ -951,22 +951,22 @@ public class PopupView extends LinearLayout {
                         supported_scene_modes_entries.add(entry);
                     }
                 }
-                addRadioOptionsToPopup(sharedPreferences, supported_scene_modes_entries, supported_scene_modes, getResources().getString(R.string.scene_mode), PreferenceKeys.SceneModePreferenceKey, CameraController.SCENE_MODE_DEFAULT, null, "TEST_SCENE_MODE", new RadioOptionsListener() {
-                    @Override
-                    public void onClick(String selected_value) {
-                        if( preview.getCameraController() != null ) {
-                            if( preview.getCameraController().sceneModeAffectsFunctionality() ) {
-                                // need to call updateForSettings() and close the popup, as changing scene mode can change available camera features
-                                main_activity.updateForSettings(getResources().getString(R.string.scene_mode) + ": " + main_activity.getMainUI().getEntryForSceneMode(selected_value));
-                                main_activity.closePopup();
-                            }
-                            else {
-                                preview.getCameraController().setSceneMode(selected_value);
-                                // keep popup open
-                            }
-                        }
-                    }
-                });
+//                addRadioOptionsToPopup(sharedPreferences, supported_scene_modes_entries, supported_scene_modes, getResources().getString(R.string.scene_mode), PreferenceKeys.SceneModePreferenceKey, CameraController.SCENE_MODE_DEFAULT, null, "TEST_SCENE_MODE", new RadioOptionsListener() {
+//                    @Override
+//                    public void onClick(String selected_value) {
+//                        if( preview.getCameraController() != null ) {
+//                            if( preview.getCameraController().sceneModeAffectsFunctionality() ) {
+//                                // need to call updateForSettings() and close the popup, as changing scene mode can change available camera features
+//                                main_activity.updateForSettings(getResources().getString(R.string.scene_mode) + ": " + main_activity.getMainUI().getEntryForSceneMode(selected_value));
+//                                main_activity.closePopup();
+//                            }
+//                            else {
+//                                preview.getCameraController().setSceneMode(selected_value);
+//                                // keep popup open
+//                            }
+//                        }
+//                    }
+//                });
                 if( MyDebug.LOG )
                     Log.d(TAG, "PopupView time 15: " + (System.nanoTime() - debug_time));
 

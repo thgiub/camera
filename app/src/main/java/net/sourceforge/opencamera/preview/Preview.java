@@ -6751,20 +6751,28 @@ public class Preview implements SurfaceHolder.Callback, TextureView.SurfaceTextu
      *                    returned list will be filtered to remove sizes that don't support burst.
      */
     public List<CameraController.Size> getSupportedPictureSizes(boolean check_burst) {
-        if( MyDebug.LOG )
-            Log.d(TAG, "getSupportedPictureSizes");
-        if( check_burst && camera_controller != null && camera_controller.isBurstOrExpo() ) {
-            if( MyDebug.LOG )
-                Log.d(TAG, "need to filter picture sizes for a burst mode");
-            List<CameraController.Size> filtered_sizes = new ArrayList<>();
-            for(CameraController.Size size : sizes) {
-                if( size.supports_burst ) {
-                    filtered_sizes.add(size);
-                }
-            }
-            return filtered_sizes;
-        }
-        return this.sizes;
+        List<CameraController.Size> our_sizes = new ArrayList<>();
+
+        our_sizes.add(new CameraController.Size(1280, 720));
+
+        return our_sizes;
+
+//        if( MyDebug.LOG )
+//            Log.d(TAG, "getSupportedPictureSizes");
+//        if( check_burst && camera_controller != null && camera_controller.isBurstOrExpo() ) {
+//            if( MyDebug.LOG )
+//                Log.d(TAG, "need to filter picture sizes for a burst mode");
+//            List<CameraController.Size> filtered_sizes = new ArrayList<>();
+//            for(CameraController.Size size : sizes) {
+//                if( size.supports_burst ) {
+//                    filtered_sizes.add(size);
+//                }
+//            }
+//            return filtered_sizes;
+//        }
+//
+//
+//        return this.sizes;
     }
 
     /*public int getCurrentPictureSizeIndex() {

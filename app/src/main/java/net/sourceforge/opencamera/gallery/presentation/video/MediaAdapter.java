@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.Adapter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,13 +13,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-
+import com.squareup.picasso.Picasso;
 
 import net.sourceforge.opencamera.R;
 import net.sourceforge.opencamera.gallery.HelperUtils;
 import net.sourceforge.opencamera.gallery.domain.EnumFileType;
 import net.sourceforge.opencamera.gallery.domain.Media;
 
+import java.io.File;
 import java.util.List;
 
 import butterknife.BindView;
@@ -50,11 +52,12 @@ class MediaAdapter extends Adapter<MediaAdapter.ViewHolder> {
     viewHolder.img.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
     if (media.type == EnumFileType.IMAGE) {
-     // Glide.with(context).load(HelperUtils.getUri(context, media.path)).into(viewHolder.img);
+      //Glide.with(context).load(HelperUtils.getUri(context, media.path)).into(viewHolder.img);
     } else if (media.type == EnumFileType.VIDEO) {
-     /* Glide.with(context)
+      /*Glide.with(context)
           .load(HelperUtils.getUri(context, media.path))
           .into(viewHolder.img);*/
+      Picasso.get().load(new File(media.path)).into(viewHolder.img);
     }
 
     viewHolder.itemView.setOnClickListener(new View.OnClickListener() {

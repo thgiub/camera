@@ -2352,21 +2352,21 @@ public class CameraController2 extends CameraController {
             // new for Camera2
             value = "high-speed-video";
             break;*/
-        case CameraMetadata.CONTROL_SCENE_MODE_LANDSCAPE:
+      /*  case CameraMetadata.CONTROL_SCENE_MODE_LANDSCAPE:
             value = "landscape";
-            break;
+            break;*/
         case CameraMetadata.CONTROL_SCENE_MODE_NIGHT:
             value = "night";
             break;
-        case CameraMetadata.CONTROL_SCENE_MODE_NIGHT_PORTRAIT:
+        /*case CameraMetadata.CONTROL_SCENE_MODE_NIGHT_PORTRAIT:
             value = "night-portrait";
-            break;
+            break;*/
         case CameraMetadata.CONTROL_SCENE_MODE_PARTY:
             value = "party";
             break;
-        case CameraMetadata.CONTROL_SCENE_MODE_PORTRAIT:
+        /*case CameraMetadata.CONTROL_SCENE_MODE_PORTRAIT:
             value = "portrait";
-            break;
+            break;*/
         case CameraMetadata.CONTROL_SCENE_MODE_SNOW:
             value = "snow";
             break;
@@ -2436,21 +2436,21 @@ public class CameraController2 extends CameraController {
                     selected_value2 = CameraMetadata.CONTROL_SCENE_MODE_FIREWORKS;
                     break;
                 // "hdr" no longer available in Camera2
-                case "landscape":
+             /*   case "landscape":
                     selected_value2 = CameraMetadata.CONTROL_SCENE_MODE_LANDSCAPE;
-                    break;
+                    break;*/
                 case "night":
                     selected_value2 = CameraMetadata.CONTROL_SCENE_MODE_NIGHT;
                     break;
-                case "night-portrait":
+                /*case "night-portrait":
                     selected_value2 = CameraMetadata.CONTROL_SCENE_MODE_NIGHT_PORTRAIT;
-                    break;
+                    break;*/
                 case "party":
                     selected_value2 = CameraMetadata.CONTROL_SCENE_MODE_PARTY;
                     break;
-                case "portrait":
+              /*  case "portrait":
                     selected_value2 = CameraMetadata.CONTROL_SCENE_MODE_PORTRAIT;
-                    break;
+                    break;*/
                 case "snow":
                     selected_value2 = CameraMetadata.CONTROL_SCENE_MODE_SNOW;
                     break;

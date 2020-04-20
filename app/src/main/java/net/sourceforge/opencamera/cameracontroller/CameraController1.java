@@ -1850,7 +1850,7 @@ public class CameraController1 extends CameraController {
         }
 
         try {
-            camera.setDisplayOrientation(result);
+            //camera.setDisplayOrientation(result);
         }
         catch(RuntimeException e) {
             // unclear why this happens, but have had crashes from Google Play...
