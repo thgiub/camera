@@ -1631,11 +1631,11 @@ public class PopupView extends LinearLayout {
             }
 
             final MainActivity main_activity = (MainActivity)this.getContext();
-			/*final Button prev_button = new Button(this.getContext());
-			//prev_button.setBackgroundResource(R.drawable.exposure);
-			prev_button.setBackgroundColor(Color.TRANSPARENT); // workaround for Android 6 crash!
-			prev_button.setText("<");
-			this.addView(prev_button);*/
+//			final Button prev_button = new Button(this.getContext());
+//			//prev_button.setBackgroundResource(R.drawable.exposure);
+//			prev_button.setBackgroundColor(Color.TRANSPARENT); // workaround for Android 6 crash!
+//			prev_button.setText("<");
+//			this.addView(prev_button);
 
             LinearLayout ll2 = new LinearLayout(this.getContext());
             ll2.setOrientation(LinearLayout.HORIZONTAL);
@@ -1671,7 +1671,7 @@ public class PopupView extends LinearLayout {
             final Button next_button = new Button(this.getContext());
             next_button.setBackgroundColor(Color.TRANSPARENT); // workaround for Android 6 crash!
             ll2.addView(next_button);
-            next_button.setText(">");
+            next_button.setText("++");
             next_button.setTextSize(TypedValue.COMPLEX_UNIT_DIP, arrow_text_size_dip);
             next_button.setTypeface(null, Typeface.BOLD);
             next_button.setPadding(padding, padding, padding, padding);

@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
 import net.sourceforge.opencamera.R;
@@ -52,12 +53,12 @@ class MediaAdapter extends Adapter<MediaAdapter.ViewHolder> {
     viewHolder.img.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
     if (media.type == EnumFileType.IMAGE) {
-      //Glide.with(context).load(HelperUtils.getUri(context, media.path)).into(viewHolder.img);
+      Glide.with(context).load(HelperUtils.getUri(context, media.path)).into(viewHolder.img);
     } else if (media.type == EnumFileType.VIDEO) {
-      /*Glide.with(context)
+      Glide.with(context)
           .load(HelperUtils.getUri(context, media.path))
-          .into(viewHolder.img);*/
-      Picasso.get().load(new File(media.path)).into(viewHolder.img);
+          .into(viewHolder.img);
+
     }
 
     viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
