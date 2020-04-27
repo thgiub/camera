@@ -2,5 +2,5 @@
 <resources>
 
     <string name="app_name">OpenCamera.testTest</string>
-
+    <string name="video">Video</string>
 </resources>

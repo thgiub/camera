@@ -8,7 +8,7 @@
 
     <string name="on">Zap</string> <!-- whether a setting is turned on, e.g., "Auto-stabilise: On" -->
     <string name="off">Vyp</string> <!-- whether a setting is turned off, e.g., "Auto-stabilise: Off" -->
-    
+
     <string name="choose_save_location">Vybrat místo uložení:</string>
     <string name="clear_folder_history">Vymazat historii složek</string>
     <string name="clear_folder_history_question">Vymazat historii složek?</string>

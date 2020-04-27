@@ -135,7 +135,7 @@
     <string-array name="preference_grid_entries">
         <item>Нет</item>
         <item>3x3</item>
-        <item>Phi 3x3</item>
+  <!--      <item>Phi 3x3</item>
         <item>4x2</item>
         <item>Перекрестие</item>
         <item>Золотое сечение (1)</item>
@@ -144,12 +144,12 @@
         <item>Золотое сечение (4)</item>
         <item>Треугольник (1)</item>
         <item>Треугольник (2)</item>
-        <item>Диагонали</item>
+        <item>Диагонали</item>-->
     </string-array>
     <string-array name="preference_grid_values">
         <item>preference_grid_none</item>
         <item>preference_grid_3x3</item>
-        <item>preference_grid_phi_3x3</item>
+  <!--      <item>preference_grid_phi_3x3</item>
         <item>preference_grid_4x2</item>
         <item>preference_grid_crosshair</item>
         <item>preference_grid_golden_spiral_right</item>
@@ -158,7 +158,7 @@
         <item>preference_grid_golden_spiral_upside_down_left</item>
         <item>preference_grid_golden_triangle_1</item>
         <item>preference_grid_golden_triangle_2</item>
-        <item>preference_grid_diagonals</item>
+        <item>preference_grid_diagonals</item>-->
     </string-array>
     <string-array name="preference_stamp_entries">
         <item>Без штампа</item>

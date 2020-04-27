@@ -8,7 +8,7 @@
 
     <string name="on">Вкл</string>
     <string name="off">Выкл</string>
-    
+
     <string name="choose_save_location">Выберите папку сохранения:</string>
     <string name="clear_folder_history">Очистить историю папки</string>
     <string name="clear_folder_history_question">Очистить историю папки?</string>

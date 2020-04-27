@@ -8,7 +8,7 @@
 
     <string name="on">Actif</string> <!-- whether a setting is turned on, e.g., "Auto-stabilise: On" -->
     <string name="off">Inactif</string> <!-- whether a setting is turned off, e.g., "Auto-stabilise: Off" -->
-    
+
     <string name="choose_save_location">Sélectionnez le dossier d\'enregistrement\u00A0: </string>
     <string name="clear_folder_history">Effacer l\'historique des dossiers</string>
     <string name="clear_folder_history_question">Effacer l\'historique des dossiers\u00A0?</string>

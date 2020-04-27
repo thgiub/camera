@@ -8,7 +8,7 @@
 
     <string name="on">Ligado</string> <!-- whether a setting is turned on, e.g., "Auto-stabilise: On" -->
     <string name="off">Desligado</string> <!-- whether a setting is turned off, e.g., "Auto-stabilise: Off" -->
-	
+
     <string name="choose_save_location">Escolha um local de armazenamento:</string>
     <string name="clear_folder_history">Limpar histórico de pastas?</string>
     <string name="clear_folder_history_question">Deseja mesmo limpar histórico de pastas?</string>

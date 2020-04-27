@@ -1,5 +1,6 @@
 package net.sourceforge.opencamera.gallery;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.ContactsContract;
@@ -29,10 +30,11 @@ public class PhotoAdapter extends Adapter<PhotoAdapter.ViewHolder> {
 
   private List<Photo> galleryList;
   private Context context;
-
-  public PhotoAdapter(Context context, List<Photo> galleryList) {
+  private Activity toAct;
+  public PhotoAdapter(Context context, List<Photo> galleryList, Activity activity) {
     this.galleryList = galleryList;
     this.context = context;
+   toAct=activity;
   }
 
   @NonNull
@@ -45,7 +47,10 @@ public class PhotoAdapter extends Adapter<PhotoAdapter.ViewHolder> {
 
   @Override
   public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+
+
     viewHolder.img.setScaleType(ImageView.ScaleType.FIT_CENTER);
+
     Picasso.get().load(HelperUtils.getUri(context, galleryList.get(i).getImagePath()))
         .resize(240, 240).centerCrop().into(viewHolder.img);
 
@@ -57,6 +62,17 @@ public class PhotoAdapter extends Adapter<PhotoAdapter.ViewHolder> {
         intent.putExtra(ConstantUtils.BUNDLE_PHOTOS_LIST, (Serializable) galleryList);
         intent.putExtra(ConstantUtils.BUNDLE_LIST_SELECT_POSITION, i);
         context.startActivity(intent);
+      }
+    });
+    viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+      @Override
+      public boolean onLongClick(View v) {
+        Intent shareIntent= new Intent();
+        shareIntent.setAction(Intent.ACTION_SEND);
+        shareIntent.putExtra(Intent.EXTRA_STREAM,HelperUtils.getUri(context,galleryList.get(i).getImagePath() ));
+        shareIntent.setType("image/*");
+        toAct.startActivity(Intent.createChooser(shareIntent, toAct.getResources().getText(R.string.send_to)));
+        return false;
       }
     });
   }

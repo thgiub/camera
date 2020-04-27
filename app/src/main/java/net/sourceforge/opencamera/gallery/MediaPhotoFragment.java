@@ -1,6 +1,7 @@
 package net.sourceforge.opencamera.gallery;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -32,6 +33,7 @@ public class MediaPhotoFragment extends Fragment implements MediaScannerBroadcas
   Unbinder unbinder;
   private MediaScannerBroadcast broadcast;
   private Context context;
+
 
   @SuppressLint("ValidFragment")
   public MediaPhotoFragment() {
@@ -91,12 +93,12 @@ public class MediaPhotoFragment extends Fragment implements MediaScannerBroadcas
     if(getArguments() != null){
       long bucketId = getArguments().getLong(ConstantUtils.BUNDLE_ALBUM_ID);
       List<Photo> list = HelperUtils.getPhotoList(context, bucketId);
-      PhotoAdapter adapter = new PhotoAdapter(context, list);
+      PhotoAdapter adapter = new PhotoAdapter(context, list,getActivity());
       rvImageGallery.setAdapter(adapter);
     }
     else {
       List<Photo> list = HelperUtils.getPhotoList(context, null);
-      PhotoAdapter adapter = new PhotoAdapter(context, list);
+      PhotoAdapter adapter = new PhotoAdapter(context, list,getActivity());
       rvImageGallery.setAdapter(adapter);
     }
   }

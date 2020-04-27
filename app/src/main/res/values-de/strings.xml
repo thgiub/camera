@@ -8,7 +8,7 @@
 
     <string name="on">Ein</string> <!-- whether a setting is turned on, e.g., "Auto-stabilise: On" -->
     <string name="off">Aus</string> <!-- whether a setting is turned off, e.g., "Auto-stabilise: Off" -->
-    
+
     <string name="choose_save_location">Speicherort auswählen:</string>
     <string name="clear_folder_history">Ordnerhistorie löschen</string>
     <string name="clear_folder_history_question">Ordnerhistorie löschen?</string>

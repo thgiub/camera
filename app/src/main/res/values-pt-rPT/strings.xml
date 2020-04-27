@@ -8,7 +8,7 @@
 
     <string name="on">Ativar</string> <!-- whether a setting is turned on, e.g., "Auto-stabilise: On" -->
     <string name="off">Desativar</string> <!-- whether a setting is turned off, e.g., "Auto-stabilise: Off" -->
-    
+
     <string name="choose_save_location">Escolher o local para armazenamento:</string>
     <string name="clear_folder_history">Limpar o histórico de pastas</string>
     <string name="clear_folder_history_question">Limpar o histórico de pastas?</string>

@@ -8,7 +8,7 @@
 
     <string name="on">On</string> <!-- whether a setting is turned on, e.g., "Auto-stabilise: On" -->
     <string name="off">Off</string> <!-- whether a setting is turned off, e.g., "Auto-stabilise: Off" -->
-    
+
     <string name="choose_save_location">Scegli la posizione di salvataggio:</string>
     <string name="clear_folder_history">Pulisci la cronologia delle cartelle</string>
     <string name="clear_folder_history_question">Pulire la cronologia delle cartelle?</string>

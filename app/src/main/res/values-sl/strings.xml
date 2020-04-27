@@ -8,7 +8,7 @@
 
     <string name="on">Vkl.</string> <!-- whether a setting is turned on, e.g., "Auto-level: On" -->
     <string name="off">Izk.</string> <!-- whether a setting is turned off, e.g., "Auto-level: Off" -->
-    
+
     <string name="choose_save_location">Izberite mesto za shranjevanje:</string>
     <string name="clear_folder_history">Počisti zgodovino mape</string>
     <string name="clear_folder_history_question">Počisti zgodovino mape?</string>

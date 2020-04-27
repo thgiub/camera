@@ -8,7 +8,7 @@
 
     <string name="on">Encendido</string> <!-- whether a setting is turned on, e.g., "Auto-level: On" -->
     <string name="off">Apagado</string> <!-- whether a setting is turned off, e.g., "Auto-level: Off" -->
-    
+
     <string name="choose_save_location">Guardar en:</string>
     <string name="clear_folder_history">Limpiar historial de carpetas</string>
     <string name="clear_folder_history_question">Desea limpiar el historial de carpetas?</string>

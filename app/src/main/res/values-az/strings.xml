@@ -6,6 +6,7 @@
     <string name="intro_ok">OK (Bu mesaj bir daha göstərilməyəcək)</string>
     <string name="on">Aç</string>
     <string name="off">Bağla</string>
+
     <string name="choose_save_location">Saxlanc yeri seçin:</string>
     <string name="clear_folder_history">Qovluq tarixini silin</string>
     <string name="clear_folder_history_question">Qovluq tarixi silinsin?</string>

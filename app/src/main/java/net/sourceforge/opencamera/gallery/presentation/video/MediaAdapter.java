@@ -1,5 +1,6 @@
 package net.sourceforge.opencamera.gallery.presentation.video;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -32,10 +33,12 @@ class MediaAdapter extends Adapter<MediaAdapter.ViewHolder> {
 
   private List<Media> data;
   private Context context;
+  private Activity mActivity;
 
-  public MediaAdapter(Context context, List<Media> data) {
+  public MediaAdapter(Context context, List<Media> data, Activity activity) {
     this.data = data;
     this.context = context;
+    mActivity = activity;
   }
 
   @NonNull
@@ -60,6 +63,19 @@ class MediaAdapter extends Adapter<MediaAdapter.ViewHolder> {
           .into(viewHolder.img);
 
     }
+    viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+      @Override
+      public boolean onLongClick(View v) {
+        Intent shareIntent= new Intent();
+        shareIntent.setAction(Intent.ACTION_SEND);
+        shareIntent.putExtra(Intent.EXTRA_STREAM,HelperUtils.getUri(context, media.path));
+        shareIntent.setType("video/*");
+        mActivity.startActivity(Intent.createChooser(shareIntent, mActivity.getResources().getText(R.string.send_to)));
+        return false;
+      }
+    });
+
+
 
     viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
       @Override

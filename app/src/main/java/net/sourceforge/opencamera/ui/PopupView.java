@@ -422,7 +422,7 @@ public class PopupView extends LinearLayout {
             if( MyDebug.LOG )
                 Log.d(TAG, "PopupView time 9: " + (System.nanoTime() - debug_time));
 
-            if( preview.isVideo() ) {
+            /*if( preview.isVideo() ) {
                 // only show video resolutions in video mode
                 //final List<String> video_sizes = preview.getVideoQualityHander().getSupportedVideoQuality();
                 //video_size_index = preview.getVideoQualityHander().getCurrentVideoQualityIndex();
@@ -498,7 +498,7 @@ public class PopupView extends LinearLayout {
                         return -1;
                     }
                 });
-            }
+            }*/
             if( MyDebug.LOG )
                 Log.d(TAG, "PopupView time 10: " + (System.nanoTime() - debug_time));
 
@@ -829,7 +829,7 @@ public class PopupView extends LinearLayout {
             if( MyDebug.LOG )
                 Log.d(TAG, "PopupView time 11: " + (System.nanoTime() - debug_time));
 
-            if( photo_mode != MyApplicationInterface.PhotoMode.Panorama ) {
+           /* if( photo_mode != MyApplicationInterface.PhotoMode.Panorama ) {
                 // auto-repeat not supported with panorama
 
                 final String [] repeat_mode_values = getResources().getStringArray(R.array.preference_burst_mode_values);
@@ -874,7 +874,7 @@ public class PopupView extends LinearLayout {
                 });
                 if( MyDebug.LOG )
                     Log.d(TAG, "PopupView time 12: " + (System.nanoTime() - debug_time));
-            }
+            }*/
 
             final String [] grid_values = getResources().getStringArray(R.array.preference_grid_values);
             String [] grid_entries = getResources().getStringArray(R.array.preference_grid_entries);
@@ -885,7 +885,7 @@ public class PopupView extends LinearLayout {
                     Log.d(TAG, "can't find grid_value " + grid_value + " in grid_values!");
                 grid_index = 0;
             }
-            addArrayOptionsToPopup(Arrays.asList(grid_entries), getResources().getString(R.string.grid), true, true, grid_index, true, "GRID", new ArrayOptionsPopupListener() {
+            addArrayOptionsToPopup(Arrays.asList(grid_entries), getResources().getString(R.string.grid), true, true, grid_index, false, "GRID", new ArrayOptionsPopupListener() {
                 private void update() {
                     if( grid_index == -1 )
                         return;
@@ -901,7 +901,8 @@ public class PopupView extends LinearLayout {
                     if( grid_index != -1 ) {
                         grid_index--;
                         if( grid_index < 0 )
-                            grid_index += grid_values.length;
+                            grid_index = 0;
+                            //grid_index += grid_values.length;
                         update();
                         return grid_index;
                     }
@@ -912,7 +913,8 @@ public class PopupView extends LinearLayout {
                     if( grid_index != -1 ) {
                         grid_index++;
                         if( grid_index >= grid_values.length )
-                            grid_index -= grid_values.length;
+                            grid_index = grid_values.length - 1;
+                            //rid_index -= grid_values.length;
                         update();
                         return grid_index;
                     }
@@ -1671,7 +1673,7 @@ public class PopupView extends LinearLayout {
             final Button next_button = new Button(this.getContext());
             next_button.setBackgroundColor(Color.TRANSPARENT); // workaround for Android 6 crash!
             ll2.addView(next_button);
-            next_button.setText("++");
+            next_button.setText(">");
             next_button.setTextSize(TypedValue.COMPLEX_UNIT_DIP, arrow_text_size_dip);
             next_button.setTypeface(null, Typeface.BOLD);
             next_button.setPadding(padding, padding, padding, padding);

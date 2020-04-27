@@ -8,7 +8,7 @@
 
     <string name="on">Bật</string> <!-- whether a setting is turned on, e.g., "Auto-level: On" -->
     <string name="off">Tắt</string> <!-- whether a setting is turned off, e.g., "Auto-level: Off" -->
-    
+
     <string name="choose_save_location">Chọn vị trí lưu:</string>
     <string name="clear_folder_history">Xóa lịch sử thư mục</string>
     <string name="clear_folder_history_question">Bạn có chắc muốn xóa lịch sử thư mục không?</string>

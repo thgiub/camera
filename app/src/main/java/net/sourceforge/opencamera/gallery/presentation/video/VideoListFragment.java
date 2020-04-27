@@ -86,7 +86,8 @@ public class VideoListFragment extends Fragment implements MediaScannerBroadcast
 
   private void initContent() {
     List<Media> data = HelperUtils.getVideoList(context, null);
-    recyclerView.setAdapter(new MediaAdapter(getActivity(), data));
+    recyclerView.setAdapter(new MediaAdapter(getActivity(), data, getActivity()));
+
   }
 
   @Override

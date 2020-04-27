@@ -8,7 +8,7 @@
 
     <string name="on">开启</string> <!-- whether a setting is turned on, e.g., "Auto-stabilise: On" -->
     <string name="off">关闭</string> <!-- whether a setting is turned off, e.g., "Auto-stabilise: Off" -->
-    
+
     <string name="choose_save_location">选择保存位置:</string>
     <string name="clear_folder_history">清除文件夹历史</string>
     <string name="clear_folder_history_question">清除文件夹历史？</string>
