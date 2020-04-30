@@ -1,4 +1,4 @@
-package net.sourceforge.opencamera.gallery.presentation.video;
+package net.sourceforge.opencamera.gallery.ui.ui.video;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

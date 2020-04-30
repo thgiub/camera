@@ -6,6 +6,7 @@ import android.app.AlarmManager;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.ContentResolver;
+import android.content.ContentUris;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -383,6 +384,56 @@ public class HelperUtils {
       cursor.close();
     }
     return list;
+  }
+
+  public static void deleteFile(String filePath, Context context) {
+    // Set up the projection (we only need the ID)
+    String[] projection = { MediaStore.Images.Media._ID };
+
+// Match on the file path
+    String selection = MediaStore.Images.Media.DATA + " = ?";
+    File file  = new File(filePath);
+    String[] selectionArgs = new String[] { file.getAbsolutePath() };
+
+// Query for the ID of the media matching the file path
+    Uri queryUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+    ContentResolver contentResolver = context.getContentResolver();
+    Cursor c = contentResolver.query(queryUri, projection, selection, selectionArgs, null);
+    if (c.moveToFirst()) {
+      // We found the ID. Deleting the item via the content provider will also remove the file
+      long id = c.getLong(c.getColumnIndexOrThrow(MediaStore.Images.Media._ID));
+      Uri deleteUri = ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, id);
+      contentResolver.delete(deleteUri, null, null);
+    } else {
+      // File not found in media store DB
+    }
+    c.close();
+  }
+
+  public static List<String> getPhotoListPaths(Context context, @Nullable Long _bucketId) {
+    List<Photo> photoList = getPhotoList(context, _bucketId);
+    List<String> pathsList = new ArrayList<>();
+
+    if (photoList == null)
+      return pathsList;
+
+    for (Photo photo : photoList)
+      pathsList.add(photo.getImagePath());
+
+    return pathsList;
+  }
+
+  public static List<String> getVideoListPaths(Context context, @Nullable String path) {
+    List<Media> mediaList = getVideoList(context, path);
+    List<String> pathsList = new ArrayList<>();
+
+    if (mediaList == null)
+      return pathsList;
+
+    for (Media media : mediaList)
+      pathsList.add(media.path);
+
+    return pathsList;
   }
 
   public static @Nullable List<Photo> getPhotoListFromDirectory (Context context, String
